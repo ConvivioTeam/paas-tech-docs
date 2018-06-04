@@ -1,5 +1,3 @@
-#Get started
-
 ## PaaS requirements
 
 To be hosted by GOV.UK PaaS, your application must:

@@ -1,5 +1,3 @@
-# Guidance
-
 ## Responsibility model
 
 Your responsibilities differ depending on whether you use a [standard buildpack](/#buildpacks), [custom buildpack](/#how-to-use-custom-buildpacks) or [Docker image](/#deploy-a-docker-image-experimental) to deploy your app.

@@ -1,5 +1,3 @@
-# Deploying apps
-
 ## Deployment overview
 
 The `cf push` command is used both to create a new app and to push a new version of an existing one. The basic steps:
@@ -52,7 +50,7 @@ You should target the sandbox space while you are testing your app. You can do t
 cf target -s sandbox
 ```
 
-You will not normally need to target the sandbox space if you are a new user, as this space is the default for new users. 
+You will not normally need to target the sandbox space if you are a new user, as this space is the default for new users.
 
 A possible exception to this is if your org is mature and has pre-existing spaces; you should check to ensure that you target the appropriate space for testing.
 

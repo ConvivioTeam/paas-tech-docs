@@ -1,5 +1,3 @@
-# Managing organisations, spaces and users
-
 ## Organisations
 
 An organisation, or org, represents a group of users, applications and environments. Each org shares the same resource, quota and custom domain.
@@ -21,7 +19,7 @@ For example, you might have separate spaces for the development and production v
 
 Run `cf spaces` to see the spaces you can access in your current org.
 
-[Org managers](/#org-managers) can create new spaces within an org. Run `cf org-users ORG` to find out who has that role, where `ORG` is the name of the org. You will see a list of [users and their roles](#users-and-user-roles). 
+[Org managers](/#org-managers) can create new spaces within an org. Run `cf org-users ORG` to find out who has that role, where `ORG` is the name of the org. You will see a list of [users and their roles](#users-and-user-roles).
 
 ![Diagram showing an org that contains multiple spaces](/documentation/figures/orgs-spaces.png)
 
@@ -93,7 +91,7 @@ Space auditors can view apps, users and resources used within a space, but canno
 
 ## Manage orgs, spaces and user roles
 
-There are several common tasks to manage spaces and user roles. 
+There are several common tasks to manage spaces and user roles.
 
 ### Create a new space
 
@@ -170,7 +168,7 @@ Org managers must add users to their org when they join their team:
 
 ### Remove users from an org
 
-When a team member leaves or stops working on a project, your org manager must revoke that team member’s access rights. Your org manager does this by [removing all of that team member’s user roles within the team’s spaces](/#remove-users-from-a-space). 
+When a team member leaves or stops working on a project, your org manager must revoke that team member’s access rights. Your org manager does this by [removing all of that team member’s user roles within the team’s spaces](/#remove-users-from-a-space).
 
 If the team member has an org role such as org manager or billing manager, you will also need to remove that team member's roles from all of your orgs. Run the following to remove a role within an org:
 

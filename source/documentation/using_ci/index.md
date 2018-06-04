@@ -1,5 +1,3 @@
-# Configuring a custom continuous integration (CI) system
-
 Setting up a CI service helps you make sure your team are delivering new features without breaking existing functionality. CI will deploy software automatically, but only if the tests pass. This helps you to iterate code faster and with greater confidence, a huge benefit once the codebase becomes larger and more complex.
 
 Tools we have seen used to manage the tests and deployments include Travis, Circle, TeamCity and Jenkins. Detailed instructions on configuring Travis or Jenkins are below.
