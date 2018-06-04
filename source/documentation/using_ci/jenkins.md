@@ -59,14 +59,14 @@ trap 'rm -r $CF_HOME' EXIT
 
 cf api https://api.cloud.service.gov.uk
 
-# Note: the actual name of the environment variable is determined
-# by what you enter into the Credentials Binding Plugin
+Note: the actual name of the environment variable is determined
+by what you enter into the Credentials Binding Plugin
 cf auth "$CF_USER" "$CF_PASSWORD"
 
 cf target -o myorg -s myspace
 cf push
 
-# Destroy token
+Destroy token
 cf logout
 ```
 
