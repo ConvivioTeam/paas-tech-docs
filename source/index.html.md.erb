@@ -1,10 +1,83 @@
 ---
-title: "GOV.UK Platform as a Service Technical Documentation"
+title: "Overview"
 ---
 
-<%= partial 'documentation/index' %>
+# Overview
 
-<%= partial 'documentation/overview/benefits' %>
-<%= partial 'documentation/overview/technology' %>
-<%= partial 'documentation/overview/pricing' %>
+GOV.UK Platform as a Service (PaaS) is a cloud-hosting platform being built by the Government Digital Service (GDS). GOV.UK PaaS manages the deployment of your apps, services and background tasks so you don’t need to hire people with specialist cloud skills.
+
+GOV.UK PaaS is currently in private beta.
+
+If you’d like to be one of the early applications going live on the platform, please contact us by emailing [gov-uk-paas-support@digital.cabinet-office.gov.uk](mailto:gov-uk-paas-support@digital.cabinet-office.gov.uk). There is limited availability for these early applications.
+
+## Benefits
+
+Right now, development teams spend considerable time and money setting up all the components required to host a government service. With GOV.UK PaaS, development teams can save on this effort by using a hosting stack that’s already been developed.
+
+Your development team can use PaaS to deploy and run government applications written in a range of languages and web frameworks. You’ll simply need to push your source code to the PaaS environment and the code will be compiled and deployed for you.
+
+PaaS makes user management easy by providing development teams with privilege separation options, for example an ‘admin’ user will be able to assign other team members certain permissions from their PaaS console.
+
+The GOV.UK PaaS is deployed to multiple availability zones, making it resilient.
+
+The GOV.UK PaaS is accredited for information up to ‘official’. Refer to the [data security classification documentation](/#data-security-classification) for more information.
+
+The platform itself is supported 24/7 by GDS, although this does not include application support.
+
+Features of the PaaS platform currently include:
+
+*   support for [multiple backing services](#deploy-a-backing-or-routing-service)
+*   language support through the [standard Cloud Foundry buildpacks](http://docs.cloudfoundry.org/buildpacks/) [external link] except .NET Core
+*   limited support for custom buildpacks
+*   support for public and private Docker images
+*   ability to stream application logs to Software as a Service logging platforms
+
+### Coding in the open
+
+We are making all new GOV.UK PaaS source code open and reusable. You can use our source code if you want to support a different backing service (any networked attached service that your application consumes to do its job, for example a PostgreSQL database).
+
+### Characteristics of GOV.UK PaaS
+This table summarises the core characteristics of the PaaS offering.
+
+|PaaS characteristic| Meaning|
+|:--- |:--- |
+| Multi-tenant architecture| Applications running on the platform are isolated from each other and can’t read or change each other’s code, data or logs (eg the Digital Marketplace application can’t access the data of the GOV.UK publishing platform).|
+| Application development teams manage their own user support|   A platform where [people developing applications also support the application out of hours](http://www.infoq.com/presentations/gov-uk-devops) leads to better software and a better user experience. |
+|Self-service model|PaaS makes it easy for development teams to get started, and to make frequent changes to their applications without requiring support from a member of the PaaS team (eg they can create a Postgres instance). Because application teams have this complete control, they won’t experience any unnecessary delays. |
+|Can use multiple public clouds|   PaaS isn’t locked into a single provider in order to encourage price competition, and to also remove the risk of a [single point of failure](https://en.wikipedia.org/wiki/Single_point_of_failure)  |
+
+## Technology
+
+GOV.UK PaaS uses Cloud Foundry and Amazon Web Services (AWS).
+
+### Cloud Foundry
+
+The PaaS platform is built using the open source [Cloud Foundry](https://www.cloudfoundry.org/) project. Multiple open source products were evaluated before Cloud Foundry was selected as the best fit for PaaS.
+
+We chose Cloud Foundry due to its maturity and because it offered:
+
+*   a selection of user permissions
+*   support for a wide variety of languages and frameworks through buildpacks
+*   a very active community
+*   an ability to scale easily, performing well under heavy load
+
+For more information on why we chose Cloud Foundry, [read our blog post](https://governmentasaplatform.blog.gov.uk/2015/12/17/choosing-cloudfoundry/).
+
+GOV.UK PaaS addresses common usability, security, compliance and scalability concerns experienced by government development teams. This makes the platform a superior option to your development team deploying their own version of the Cloud Foundry software, where they’d need to address cloud security implications and build a continuous integration pipeline.
+
+### Amazon Web Services
+
+Currently GOV.UK PaaS runs on [Amazon Web Services](https://aws.amazon.com/). As a tenant, you do not have to interact with AWS directly; all interactions required to deploy and manage your service are carried out through Cloud Foundry commands.
+
+The platform may change cloud provider in the future, depending on cost.  Your interface to the PaaS will always remain the same, no matter which provider is in use.
+
+## Pricing
+
+GOV.UK PaaS will initially operate using a freemium pricing model.
+
+We will select underlying hosting providers with cost in mind. We can change to a more competitively-priced hosting provider without changing how you interface with the PaaS.
+
+Please contact us for pricing details at [gov-uk-paas-support@digital.cabinet-office.gov.uk](mailto:gov-uk-paas-support@digital.cabinet-office.gov.uk).
+
+
 
